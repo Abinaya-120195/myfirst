@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "No dependencies to install for a static website"
+  build:
+    commands:
+      - echo "No build required for static website"
+  post_build:
+    commands:
+      - echo "Syncing files to S3"
+      - aws s3 sync . s3://my-first-static-website123 --delete

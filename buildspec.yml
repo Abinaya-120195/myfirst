@@ -9,4 +9,4 @@ phases:
   post_build:
     commands:
       - echo "Syncing files to S3"
-      - aws s3 sync src/mystatic s3://my-first-static-website123 --delete
+      - aws s3 sync . s3://my-first-static-website123 --delete
